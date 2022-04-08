@@ -1,0 +1,75 @@
+body{
+    background-color: #ccc;
+}
+
+*{
+    transition: 200ms !important;
+}
+
+
+.player-move-image,
+.computer-move-image{
+    width: 315px;
+    height: 220px;
+    background: transparent;
+}
+
+
+.win{
+    color: #14c6f3;
+    text-shadow: 0 0 5px #2d3333;
+}
+
+.lose{
+    color: #f31414;
+    text-shadow: 0 0 5px #2d1444;
+}
+.player-score,
+.computer-score{
+    color: gold;
+}
+
+.alert{
+    background-color: antiquewhite;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #2d3132;
+    border-radius: 10px;
+    animation-name: _hide_yourself;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+}
+
+.alert-icon::before{
+    content: "!";
+    padding: 2px 10px;
+    background-color: burlywood;
+    border-radius: 50%;
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.alert-content{
+    color: rgba(0,0,0,.8);
+    font-weight: bold;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+@keyframes _hide_yourself {
+    50%{
+        transform: scale(1.1);
+    }
+}
